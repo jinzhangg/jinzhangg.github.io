@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="/theme/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://jinzhangg.github.io/theme/css/style.css">
 	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
 	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
-	<link rel="stylesheet" type="text/css" href="/theme/css/pygments.css">
+	<link rel="stylesheet" type="text/css" href="http://jinzhangg.github.io/theme/css/pygments.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata|Roboto:400,300' rel='stylesheet' type='text/css'>
 
-	<link href="/" type="application/atom+xml" rel="alternate" title="Jin Zhang ATOM Feed" />
+	<link href="http://jinzhangg.github.io/" type="application/atom+xml" rel="alternate" title="Jin Zhang ATOM Feed" />
 
 
 		<title>Jin Zhang - Articles by Jin Zhang</title>
@@ -16,16 +16,16 @@
 <body>
 	<section id="sidebar">
 		<figure id="user_logo">
-            <a href=""><div class="logo">&nbsp;</div></a>
+            <a href="http://jinzhangg.github.io"><div class="logo">&nbsp;</div></a>
 		</figure>
 
 		<div class="user_meta">
-            <h1 id="user"><a href="" class="">Jin Zhang</a></h1>
+            <h1 id="user"><a href="http://jinzhangg.github.io" class="">Jin Zhang</a></h1>
 			<h2></h2>
 			<p class="bio">Python and Flask Developer</p>
 			<ul>
-						<li><a href="/about/">About</a></li>
-						<li><a href="/contact/">Contact</a></li>
+						<li><a href="http://jinzhangg.github.io/about/">About</a></li>
+						<li><a href="http://jinzhangg.github.io/contact/">Contact</a></li>
 					<li><a href="http://github.com/jinzhangg">GitHub</a></li>
 			</ul>
 		</div>
@@ -54,14 +54,17 @@
 		<ol>
 				<li>
 					<h1 class="title">
-						<a href="/posts/2013/sockjs-redis-nodejs-tutorial/" rel="bookmark" title="Permalink to SockJS, Redis, Node.js Tutorial">SockJS, Redis, Node.js Tutorial</a>
+						<a href="http://jinzhangg.github.io/posts/2013/sockjs-redis-nodejs-tutorial/" rel="bookmark" title="Permalink to SockJS, Redis, Node.js Tutorial">SockJS, Redis, Node.js Tutorial</a>
 					</h1>
 					<abbr class="published" title="2013-04-18T00:00:00">Thu 18 April 2013</abbr>
-				<div class="entry-content"> <p>I became interested in real-time web applications when I saw an excellent <a class="reference external" href="http://pyvideo.org/video/1798/make-more-responsive-web-applications-with-socket">PyCon video</a> on Socket.io by Luke Sneeringer. I decided to explore the subject and was disappointed to find little to none easy to follow tutorials available on the subject. This is not surprising given that WebSockets is still in its early stages. There are still issues dealing with proper browser support for the WebSockets standard. Libraries such as socket.io and SockJS aim to fix this problem by falling back on less optimal but more widely support methods to mimic two way communication for example by using ...</p> </div>
+				<div class="entry-content"> <p>I became interested in real-time web applications when I saw an excellent <a class="reference external" href="http://pyvideo.org/video/1798/make-more-responsive-web-applications-with-socket">PyCon video</a> on Socket.io by Luke Sneeringer. I decided to explore the subject and was disappointed to find little to none easy to follow tutorials available on the subject. This is not surprising given that WebSockets is still in its early stages. There are still issues dealing with proper browser support for the WebSockets standard. Libraries such as socket.io and SockJS aim to fix this problem by falling back on less optimal but more widely support methods to mimic two way communication for example by using Flash or long polling and others.</p>
+<p>In this tutorial, I will describe how to architect a real-time chat web application using SockJS, Redis, and node.js.</p>
+<p>Why use SockJS over socket.io?
+Socket.io is certainly the more popular choice with 8k stars on Github compared to 1.2k for ...</p> </div>
 				</li>
 				<li>
 					<h1 class="title">
-						<a href="/posts/2013/deploying-django-on-nginx-and-uwsgi/" rel="bookmark" title="Permalink to Deploying Django on Nginx and uWSGI">Deploying Django on Nginx and uWSGI</a>
+						<a href="http://jinzhangg.github.io/posts/2013/deploying-django-on-nginx-and-uwsgi/" rel="bookmark" title="Permalink to Deploying Django on Nginx and uWSGI">Deploying Django on Nginx and uWSGI</a>
 					</h1>
 					<abbr class="published" title="2013-04-07T00:00:00">Sun 07 April 2013</abbr>
 				<div class="entry-content"> <p>Nginx and uWSGI has been growing in popularity in the Django community due to <a class="reference external" href="http://nichol.as/benchmark-of-python-web-servers">benchmarks</a> showing them to be faster then the standard Apache or Gunicorn setup. I recently went through the process of setting up a fresh VPS with this setup and decided to document my process here.</p>
@@ -71,15 +74,28 @@
 <span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span>
 <span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span> <span class="n">git</span>
 <span class="c"># Required for uWSGI</span>
-<span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get ...</span></pre></div> </div>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">dev</span>
+<span class="c"># Install nginx and uWSGI</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">nginx</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">uwsgi</span>
+</pre></div>
+<p>We will use Upstart to automatically start up uWSGI on restarts. Create the file <code>/etc/init/uwsgi.conf</code> and insert:</p>
+<div class="highlight"><pre><span class="n">description</span>     <span class="s">&quot;uWSGI Emperor&quot;</span>
+
+<span class="n">start</span> <span class="n">on</span> <span class="n">runlevel</span> <span class="p">[</span><span class="mi">2345</span><span class="p">]</span>
+<span class="n">stop</span> <span class="n">on</span> <span class="n">runlevel ...</span></pre></div> </div>
 				</li>
 				<li>
 					<h1 class="title">
-						<a href="/posts/2013/installing-django-on-heroku-with-postgresql/" rel="bookmark" title="Permalink to Installing Django on Heroku with Postgresql">Installing Django on Heroku with Postgresql</a>
+						<a href="http://jinzhangg.github.io/posts/2013/installing-django-on-heroku-with-postgresql/" rel="bookmark" title="Permalink to Installing Django on Heroku with Postgresql">Installing Django on Heroku with Postgresql</a>
 					</h1>
 					<abbr class="published" title="2013-04-06T00:00:00">Sat 06 April 2013</abbr>
 				<div class="entry-content"> <p>We will set up a basic Django site on the popular hosting platform <a class="reference external" href="http://heroku.com">Heroku</a>. The main benefit of Heroku is allowing developers to focus on writing code that differeniates their product and leaving the system administrator tasks to Heroku. They offer a free plan which is sufficient for small projects and personal blogs. The downside is that they do not allow custom domains under the free plan, instead you will be given a subdomain under heroku.com.</p>
-<p>The following tutorial assumes you are running Linux Ubuntu or derivatives of it. First sign up for a free <a class="reference external" href="http://heroku.com">Heroku</a> account and install ...</p> </div>
+<p>The following tutorial assumes you are running Linux Ubuntu or derivatives of it. First sign up for a free <a class="reference external" href="http://heroku.com">Heroku</a> account and install the Heroku Toolbelt. The toolbelt allows us to run heroku's terminal commands and also installs the git revision control program.</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">wget</span> <span class="o">-</span><span class="n">qO</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">toolbelt</span><span class="o">.</span><span class="n">heroku</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">ubuntu</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
+</pre></div>
+<p>Next let's install python pip and virtualenv. A virtualenv allows us to keep project dependencies separate from other ...</p> </div>
 				</li>
 		</ol>
 	</dl>
